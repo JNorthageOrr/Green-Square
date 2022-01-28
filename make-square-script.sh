@@ -1,13 +1,15 @@
 #!/bin/sh
-. /home/ubu/.bashrc
 
-# make the script executable
+# make this script executable
 # chmod +x make-square-script.sh
+
+#your computer user
+USER=jnorr
 
 major=0
 minor=0
 build=0
-version="$(grep -oP '^ver\s+\K\S\S\S\S\S' /home/ubu/Green-Square/readme.md)"
+version="$(grep -oP '^ver\s+\K\S\S\S\S\S' /home/$USER/Green-Square/readme.md)"
 regex="([0-9]+).([0-9]+).([0-9]+)"
 
 # compare version to regex, split regex match into 3 arrays
@@ -22,18 +24,16 @@ build=$(echo $build + 1 | bc)
 
 # write to readme.md
 
-echo "ver ${major}.${minor}.${build}" > /home/ubu/Green-Square/readme.md
+echo "ver ${major}.${minor}.${build}" > /home/$USER/Green-Square/readme.md
 
 # add, commit, push
-cd /home/ubu/Green-Square/
+cd /home/$USER/Green-Square/
 /usr/bin/git add .
 /usr/bin/git commit -m "increment to ${major}.${minor}.${build}"
 /usr/bin/git push origin master
 
 else
-  echo "usage: ./make-square-script.sh"
-  echo "version:" $version
-  echo "regex:" $regex
+  echo "Something went wrong"
   exit -1
 fi
 
