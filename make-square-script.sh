@@ -24,7 +24,9 @@ build=$(echo $build + 1 | bc)
 
 # write to readme.md
 
-echo "ver ${major}.${minor}.${build}" >> /home/$USER/Green-Square/readme.md
+#echo "ver ${major}.${minor}.${build}" >> /home/$USER/Green-Square/readme.md
+#find the old version number, replace it with the new version number
+sed -i -e "s/$version/$major.$minor.$build/g" /home/$USER/Green-Square/readme.md
 
 # add, commit, push
 cd /home/$USER/Green-Square/
