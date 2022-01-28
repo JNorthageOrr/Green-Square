@@ -1,10 +1,15 @@
 #Implementation Instructions:
 
 Fork the Repo
+
 Clone the Forked repo
+
 Change the computer user 'jnorr', referenced in make-square-script.sh to whatever your computer user is
+
 from the cli, run: crontab -e
+
 At the bottom of the file, add the following, again, using your computer user, not 'jnorr':
+
 USER=jnorr
 
 55 16 * * * /bin/bash /home/$USER/Green-Square/make-square-script.sh
