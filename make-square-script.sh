@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 . /home/ubu/.bashrc
 
 # make the script executable
