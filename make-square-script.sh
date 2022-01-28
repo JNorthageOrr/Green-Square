@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # make this script executable
 # chmod +x make-square-script.sh
@@ -24,7 +24,7 @@ build=$(echo $build + 1 | bc)
 
 # write to readme.md
 
-echo "ver ${major}.${minor}.${build}" > /home/$USER/Green-Square/readme.md
+echo "ver ${major}.${minor}.${build}" >> /home/$USER/Green-Square/readme.md
 
 # add, commit, push
 cd /home/$USER/Green-Square/
