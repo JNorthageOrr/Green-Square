@@ -40,4 +40,4 @@ Recommend selecting the 'local only' option during setup
 
 sudo tail -f /var/mail/jnorr
 
-ver 1.0.4000
+ver 1.0.5000
